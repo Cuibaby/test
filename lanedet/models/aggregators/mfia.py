@@ -81,9 +81,9 @@ class cbam(nn.Module):
         x = self.sa(x) * x  # ¹ã²¥»úÖÆ
         return x
 @AGGREGATORS.register_module
-class MIFA(nn.Module):
+class MFIA(nn.Module):
     def __init__(self, direction, alpha, iter, conv_stride, cfg):
-        super(MIFA, self).__init__()
+        super(MFIA, self).__init__()
         self.cfg = cfg
         self.iter = iter
         chan = cfg.featuremap_out_channel 

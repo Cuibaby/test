@@ -15,7 +15,7 @@ featuremap_out_stride = 8
 sample_y = range(589, 230, -20)
 
 aggregator = dict(
-    type='MIFA',
+    type='MFIA',
     direction=['d', 'u', 'r', 'l'],
     alpha=2.0,
     iter=2,
@@ -30,8 +30,12 @@ heads = dict(
     sample_y=sample_y,
 )
 
+ca = dict(
+    type = 'CA'
+)
+
 trainer = dict(
-    type='MIFA'
+    type='MFIA'
 )
 
 evaluator = dict(

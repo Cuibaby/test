@@ -13,7 +13,7 @@ featuremap_out_channel = 128
 featuremap_out_stride = 8
 
 aggregator = dict(
-    type='MIFA',
+    type='MFIA',
     alpha=2.0,
     iter=2,
     conv_stride=9,
@@ -27,6 +27,10 @@ heads = dict(
     sample_y=sample_y,
 )
 
+ca = dict(
+    type = 'CA'
+)
+
 optimizer = dict(
   type = 'SGD',
   lr = 0.025,
@@ -35,8 +39,8 @@ optimizer = dict(
 )
 
 
-epochs = 150
-batch_size = 4
+epochs = 80
+batch_size = 8
 total_iter = (3626 // batch_size + 1) * epochs 
 import math
 scheduler = dict(
